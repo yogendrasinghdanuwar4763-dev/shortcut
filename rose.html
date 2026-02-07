@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Rose Day ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body{
+      margin:0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      color:white;
+      overflow:hidden;
+    }
+    .card{
+      background: rgba(255,255,255,0.15);
+      padding:40px;
+      border-radius:20px;
+      box-shadow:0 0 30px rgba(0,0,0,0.2);
+      max-width:500px;
+      animation: fadeIn 2s ease;
+    }
+    h1{
+      font-size:2.5em;
+      margin-bottom:10px;
+    }
+    h2{
+      font-weight:300;
+      margin-bottom:20px;
+    }
+    p{
+      font-size:1.2em;
+      line-height:1.6;
+    }
+    .rose{
+      font-size:60px;
+      animation: float 3s ease-in-out infinite;
+      margin:20px 0;
+    }
+    button{
+      margin-top:20px;
+      padding:12px 25px;
+      border:none;
+      border-radius:30px;
+      background:#ff4d6d;
+      color:white;
+      font-size:1em;
+      cursor:pointer;
+      transition:0.3s;
+    }
+    button:hover{
+      background:#ff1e4d;
+      transform: scale(1.05);
+    }
+    @keyframes float{
+      0%{transform: translateY(0);}
+      50%{transform: translateY(-15px);}
+      100%{transform: translateY(0);}
+    }
+    @keyframes fadeIn{
+      from{opacity:0; transform: scale(0.9);} 
+      to{opacity:1; transform: scale(1);} 
+    }
+
+    .hearts span{
+      position:absolute;
+      bottom:-20px;
+      color:#ff4d6d;
+      font-size:20px;
+      animation: rise 6s linear infinite;
+    }
+    @keyframes rise{
+      0%{transform: translateY(0) scale(0.5); opacity:0;}
+      20%{opacity:1;}
+      100%{transform: translateY(-800px) scale(1.2); opacity:0;}
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <h1>Happy Rose Day 🌹</h1>
+  <h2>My Pranu ❤️</h2>
+  <div class="rose">🌹</div>
+  <p>
+    Just like a rose, you make my life more beautiful, colorful, and full of love.  
+    Every smile of yours is my happiness, and every moment with you is a blessing.  
+    I’m so lucky to have you in my life. 💕
+  </p>
+  <button onclick="showMessage()">Click for Surprise 💖</button>
+  <p id="surprise"></p>
+</div>
+
+<div class="hearts" id="hearts"></div>
+
+<script>
+  function showMessage(){
+    document.getElementById("surprise").innerHTML = "Mero mayaluu this is forr uhh thiss valentine week matraa ley gardaa maya badhdainaa malai tw hjr ko lagii jailey mayaa badheykai hunxx the way u Support mee u deservee an rose k saneyy 🥺 but sadly 😅u know my budget is little little tightt like your assh😝 ani thigh 🤭 may u glow alwayss like ur boobboee😝 mero mayalu ko mukh hailey puka pareykai <br>huoshh kina vaney i lovee to touch you 🤭I loveee uh myy lovee🤭</br> 💘🌹";
+  }
+
+  const hearts = document.getElementById('hearts');
+  for(let i=0;i<30;i++){
+    let span = document.createElement('span');
+    span.innerHTML = '❤';
+    span.style.left = Math.random()*100 + 'vw';
+    span.style.animationDelay = Math.random()*5 + 's';
+    span.style.fontSize = (Math.random()*20 + 15) + 'px';
+    hearts.appendChild(span);
+  }
+</script>
+
+</body>
+</html>
